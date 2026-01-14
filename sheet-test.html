@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrintFix – Sheet Test</title>
+</head>
+
+<body style="background:#0b0f1a;color:white;font-family:Arial;padding:20px;">
+
+<h1>PrintFix – Live Questions (Q1–Q20)</h1>
+
+<div id="questions"></div>
+
+<script>
+const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtIlo_PxBO35ig1NsZSOi17KbzbGt9hAWfsy-BbB8WS6tnxvqzjl--nahGOhDtw62sxpWd3VbFtK55/pub?output=csv";
+
+fetch(sheetURL)
+  .then(res => res.text())
+  .then(text => {
+    const rows = text.split("\n").slice(1,21); // Q1–Q20
+    let html = "";
+
+    rows.forEach((row, i) => {
+      const cols = row.split(",");
+
+      html += `
+        <div style="background:#151a2e;padding:15px;margin-bottom:15px;border-radius:8px;">
+          <h3>Q${cols[0]}. ${cols[2]}</h3>
+          <p>(A) ${cols[3]}</p>
+          <p>(B) ${cols[4]}</p>
+          <p>(C) ${cols[5]}</p>
+          <p>(D) ${cols[6]}</p>
+          <p><b>Answer:</b> ${cols[7]}</p>
+          <p style="color:#ccc">${cols[8]}</p>
+        </div>
+      `;
+    });
+
+    document.getElementById("questions").innerHTML = html;
+  });
+</script>
+
+</body>
+</html>

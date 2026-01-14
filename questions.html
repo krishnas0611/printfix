@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PrintFix – Printing Question Bank</title>
+
+  <style>
+    body {
+      background-color: #0b0f1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .question {
+      background: #151a2e;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .option {
+      margin: 6px 0;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #00b7ff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      background: #1f2947;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Printing Question Bank</h1>
+  <p>Objective type printing questions with explanations.</p>
+
+  <!-- QUESTION 1 -->
+  <div class="question">
+    <h3>Q1. Offset printing is also known as:</h3>
+
+    <div class="option">(A) Direct printing process</div>
+    <div class="option">(B) Relief printing process</div>
+    <div class="option">(C) Indirect lithographic printing process</div>
+    <div class="option">(D) Intaglio printing process</div>
+
+    <button onclick="document.getElementById('a1').style.display='block'">
+      Show Answer
+    </button>
+
+    <div class="answer" id="a1">
+      <b>Correct Answer:</b> (C)<br><br>
+
+      <b>Explanation:</b><br>
+      Offset printing transfers ink from plate → blanket → paper, hence it is an indirect lithographic process.<br><br>
+
+      <b>Why others are wrong:</b><br>
+      (A) Direct printing prints plate directly on paper.<br>
+      (B) Relief printing uses raised image areas.<br>
+      (D) Intaglio printing uses recessed image areas.
+    </div>
+  </div>
+
+</body>
+</html>
+<!-- QUESTION 2 -->
+<div class="question">
+  <h3>Q2. Gum Arabic is used in fountain solution to:</h3>
+
+  <div class="option">(A) Increase ink tack</div>
+  <div class="option">(B) Act as preservative</div>
+  <div class="option">(C) Desensitize non-image area</div>
+  <div class="option">(D) Reduce surface tension</div>
+
+  <button onclick="document.getElementById('a2').style.display='block'">
+    Show Answer
+  </button>
+
+  <div class="answer" id="a2">
+    <b>Correct Answer:</b> (C)<br><br>
+
+    <b>Explanation:</b><br>
+    Gum Arabic keeps non-image areas hydrophilic and ink-repellent.<br><br>
+
+    <b>Why others are wrong:</b><br>
+    (A) Ink tack is controlled by varnishes.<br>
+    (B) Preservatives are biocides/fungicides.<br>
+    (D) Surface tension is reduced by alcohol.
+  </div>
+</div>
